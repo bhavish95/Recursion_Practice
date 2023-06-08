@@ -1,0 +1,38 @@
+// by stack falling return type
+public class test2{
+	public static int numbercount(int n) {
+		if(n==0) {
+			return 0;
+		}
+		if(n%10==0) {
+			return 1+ numbercount(n/10);
+		}
+		else {
+			return numbercount(n/10);
+		}
+		
+	}
+	public static void main(String[] args) {
+		int result= numbercount(1020300);
+		System.out.println(result);
+		
+	}
+	
+}
+
+// by stack building void
+public class countzero {
+      public static void count(int num,int zeros) {
+    	  if(num==0) {
+    		  System.out.println("the num of zeroes:"+zeros);
+    		  return;
+    	  }
+    	  if(num%10==0) {
+    		  zeros++;
+    	  }
+    	  count(num/10,zeros);
+      }
+      public static void main(String[] args) {
+    	  count(108002,0);
+      }
+}
