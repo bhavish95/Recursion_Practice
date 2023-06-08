@@ -1,0 +1,14 @@
+//by stack falling return type
+public class sumofseries {
+	public static double series(int num) {
+		if(num==0) {
+			return 0;
+		}
+		double res=series(num-1);
+		return res+(num/(Math.pow(num, num)));
+	}
+	public static void main(String[] args) {
+		System.out.println(series(14));
+	}
+
+}
