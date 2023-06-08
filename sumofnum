@@ -1,1 +1,35 @@
+//by stack building void
+public class sumofn {
+	public static void natural(int i,int n,int sum) {
+		if(i==n) {
+			sum+=i;
+			System.out.println("the sum is"+sum);
+			return;
+		}
+		sum+=i;
+		natural(i+1,n,sum);
+	}
+	public static void main(String[] args) {
+		natural(1,5,0);
+	}
+
+}
+//by stack falling return type
+public class sumofn2 {
+	public static int sumof(int num) {
+		if(num==0) {
+			
+			return 0;
+		}
+		int result=sumof(num-1);
+		result=result+num;
+		return result;
+	}
+	public static void main(String[] args) {
+		
+	   System.out.println(sumof(5));
+	}
+	
+
+}
 
