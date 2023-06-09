@@ -1,0 +1,18 @@
+//by stack falling return type
+public class countoccurence {
+     public static int occurence(int [] arr,int num,int index) {
+    	 if(index==arr.length) {
+    		 return 0;
+    	 }
+    	 int count=occurence(arr,num,index+1);
+    		 if(arr[index]==num) {
+    			 count++;
+    		 }
+    		 return count;
+    	 }
+    	 public static void main(String[] args) {
+    		 int arr[]= {50,20,30,40,50,10,20,60,20};
+    		 System.out.println(occurence(arr,20,0));
+    	 }
+ }
+
