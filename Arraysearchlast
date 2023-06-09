@@ -1,0 +1,17 @@
+//by stack falling return type
+public class Arraysearchlast {
+	public static int search(int [] arr,int num,int index) {
+		if(index<0) {
+			return -1;
+		}
+		if(arr[index]==num) {
+			return index;
+		}
+		return search(arr,num,index-1);
+	}
+	public static void main(String[] args) {
+		int [] arr= {50,20,10,30,20,60};
+		System.out.println(search(arr,20,arr.length-1));
+	}
+
+}
