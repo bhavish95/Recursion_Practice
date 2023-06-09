@@ -1,0 +1,19 @@
+//by building return type
+public class replacewithHashtag {
+      public static void replace(String str,int word) {
+    	  if(str.length()-1==word) {
+    	  System.out.println(str);
+    	  return;
+    	  }
+    	  StringBuilder np =new StringBuilder(str);  //its for storing the output after replacing with hashtag
+    	  if(str.charAt(word)==str.charAt(word+1)) {
+    		  np.setCharAt(word+1, '#');
+    	  }
+    	  replace(np.toString(),word+1);
+      }
+      public static void main(String[] main) {
+    	  replace("aabbcc",0);
+      }
+      
+      
+}
