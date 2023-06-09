@@ -1,0 +1,18 @@
+//by stack falling return type
+public class prime {
+	public static String primenrs(int n,int temp) {
+		if(temp==(int)Math.sqrt(n)) {
+			return "the number is prime";
+		}
+		if(n%temp!=0) {
+			return primenrs(n,temp+1);
+		}
+		else {
+			return "the number is not prime";
+		}
+	}
+	public static void main(String[] args) {
+		System.out.println(primenrs(37,2));
+	}
+    
+}
