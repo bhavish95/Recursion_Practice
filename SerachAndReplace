@@ -1,0 +1,19 @@
+//by stack building method
+public class SerachandReplace {
+	public static void replaces(int arr[],int search,int replace,int index) {
+		if(index==arr.length) {
+			return;
+		}
+		if(arr[index]==search) {
+			arr[index]=replace;
+		}
+		System.out.println(arr[index]);
+		replaces(arr,search,replace,index+1);
+	}
+	public static void main(String[] args) {
+		int arr[]= {50,20,10,30,50,40,10};
+		replaces(arr,10,100,0);
+		System.out.println();
+	}
+
+}
