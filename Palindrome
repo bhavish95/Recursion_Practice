@@ -1,0 +1,18 @@
+//by stack falling return type
+public class plindrome {
+       public static String ispla(String str) {
+    	   int length=str.length();
+    	   if(length<=1) {
+    		   return"the string is palindrome";
+    	   }
+    	   if(str.charAt(0)==str.charAt(length-1)) {
+    		   return ispla(str.substring(1,length-1));
+    	   }
+    	   else {
+    		   return "the string is not palindrome";
+    	   }
+       }
+       public static void main(String[] args) {
+    	   System.out.println(ispla("ABB"));
+       }
+}
